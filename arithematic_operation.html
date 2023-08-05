@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head><title>arithematic operations</title>
+</head>
+<body>
+<input type="text" id="n1"><br><br>
+<input type="text" id="n2"><br><br>
+<input type="text" id="res"><br><br>
+<input type="button" onclick="add()" id="add" value="add">
+<input type="button" onclick="sub()" id="sub" value="sub">
+<input type="button" onclick="mul()" id="mul" value="mul">
+<input type="button" onclick="div()" id="div" value="div">
+<script type="text/javascript">
+function add(){
+     var a=parseInt(document.getElementById("n1").value);
+     var b=parseInt(document.getElementById("n2").value);
+     document.getElementById("res").value=a+b;
+}
+function sub(){         
+      var a=parseInt(document.getElementById("n1").value);
+      var b=parseInt(document.getElementById("n2").value);
+      document.getElementById("res").value=a-b;
+}
+function mul(){
+      var a=parseInt(document.getElementById("n1").value);
+      var b=parseInt(document.getElementById("n2").value);
+      document.getElementById("res").value=a*b;
+}
+function div(){
+       var a=parseInt(document.getElementById("n1").value);
+       var b=parseInt(document.getElementById("n2").value);
+       document.getElementById("res").value=a/b;
+}
+</script>
+</body>
+</html>
+                
