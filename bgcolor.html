@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head><title>bgcolor</title>
+</head>
+<body>
+<input type="Button" onclick="red()" id="color" value="red"><br>
+<input type="Button" onclick="green()" id="color1" value="green"><br>
+<input type="Button" onclick="blue()" id="color2" value="blue">
+<script type="text/javascript">
+function red(color){
+    document.body.style.background="red";
+}
+window.addEventlistener("load",function(){ changeBackground('red')});
+function green(color){
+    document.body.style.background="green";
+}
+window.addEventlistener("load",function(){ changeBackground('green')});
+function blue(color){
+    document.body.style.background="blue";
+}
+window.addEventlistener("load",function(){ changeBackground('blue')});
+</script>
+</body>
+</html>
+
