@@ -1,11 +1,11 @@
 <!Doctype html>
-<html>
+<html><head><title>product</title></head>
 <body>
 <script type="text/javascript">
-const products=[{name:"p1",price:20,category:"ele"},{name:"p2",price:30,category:"clo"},{name:"p3",price:40,category:"ele"},
+const product=[{name:"p1",price:20,category:"ele"},{name:"p2",price:30,category:"clo"},{name:"p3",price:40,category:"ele"},
 {name:"p4",price:50,category:"clo"},{name:"p5",price:60,category:"clo"},{name:"p6",price:70,category:"ele"},{name:"p7",price:80,category:"clo"},
 {name:"p8",price:90,category:"ele"},];
-const productsByCategory=products.reduce((acc,product)=>{
+const productByCategory=product.reduce((acc,product)=>{
 const category=product.category;
 if(!acc[category]){
     acc[category]=[];
@@ -15,7 +15,7 @@ return acc;
 },{});
 const avgPriceByCategory=Object.keys(productByCategory).map(category=>{
 const sum=productsByCategory[category].reduce((acc,product)=>acc+product.price,0);
-return{category:category,average:sum/productsByCategory[category].length};
+return{category:category,average:sum/productByCategory[category].length};
 });
 const highPricedCategories=avgPriceByCategory.filter(category=>category.average>50);
 console.log(highPricedCategories);
